@@ -1,0 +1,221 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: SqMilJp8jSPMivDTbFwLVYjihAQ=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: FUYWu0zpR1nifHIbL+FBvwZQZVg=
+
+Name: com/jgoodies/forms/builder/PanelBuilder.class
+SHA1-Digest: LaBHQ1H5TdHNImtpSTvKjdiZHK0=
+
+Name: com/jgoodies/forms/layout/FormLayout$Measure.class
+SHA1-Digest: ilErDrgJnovOn3U4y8PzwjVwtnQ=
+
+Name: com/jgoodies/forms/layout/LayoutMap.class
+SHA1-Digest: MuoUhMUrrgeUJAOSFX+tjVhYwq0=
+
+Name: com/jgoodies/forms/layout/CellConstraints$Alignment.class
+SHA1-Digest: v+LPGKn+UTF8DSH/4ownQZaMXHQ=
+
+Name: com/jgoodies/forms/layout/FormLayout$CachingMeasure.class
+SHA1-Digest: W1c6UkrFIyiwQnUkZhRlZXI/mhw=
+
+Name: com/jgoodies/forms/factories/Borders$EmptyBorder.class
+SHA1-Digest: ODJa5dx/kPg+3amzGl8SG/YoqAs=
+
+Name: com/jgoodies/forms/layout/FormLayout$MinimumWidthMeasure.class
+SHA1-Digest: PhuE1E51htv2s2/JF6aUXQA76Ko=
+
+Name: com/jgoodies/forms/builder/ButtonStackBuilder.class
+SHA1-Digest: zdd2JapdBfiSrnqHFNg5lnICLCg=
+
+Name: com/jgoodies/forms/layout/Sizes$1.class
+SHA1-Digest: R6gZfLLbhwRPfdcu1/r/9zGdLyo=
+
+Name: com/jgoodies/forms/debug/FormDebugUtils.class
+SHA1-Digest: qn4irktDid32tdUIMjjrm67roOY=
+
+Name: com/jgoodies/forms/layout/ConstantSize$Unit.class
+SHA1-Digest: 0uGuvEnM1VVkcrBuK+Q3Xr8IiWQ=
+
+Name: com/jgoodies/forms/builder/AbstractFormBuilder.class
+SHA1-Digest: bjg1F3x64zw+KHW3EbQNMt8d/Vg=
+
+Name: com/jgoodies/forms/layout/FormSpec$DefaultAlignment.class
+SHA1-Digest: q6wRSanWTZhuDz+SCwyoAuKyRIM=
+
+Name: com/jgoodies/forms/builder/I15dPanelBuilder.class
+SHA1-Digest: t5zDbgVhhiAzSucwy3hDOmO7wJ4=
+
+Name: com/jgoodies/forms/layout/FormSpecParser$Multiplier.class
+SHA1-Digest: ms2ZUGKkp/PDiozERhWqSTxfOk4=
+
+Name: com/jgoodies/forms/util/MacLayoutStyle.class
+SHA1-Digest: h6q0mUZflA9Reop+uvyNfdu/4FM=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$TitledSepar
+ atorLayout.class
+SHA1-Digest: 2dYrVEpxELsYeFSE7llvR7LUvqc=
+
+Name: com/jgoodies/forms/layout/Size.class
+SHA1-Digest: jTrOf9BhPgRVtZNZ/SGyr+qxVmA=
+
+Name: com/jgoodies/forms/factories/CC.class
+SHA1-Digest: 6WU9fkxK4EH80y9UM7dnKFC1KUE=
+
+Name: com/jgoodies/forms/layout/Sizes$ComponentSize.class
+SHA1-Digest: PfIsdt7SeOkbnMe9w3z7VZ8UNAM=
+
+Name: com/jgoodies/forms/layout/FormLayout$LayoutInfo.class
+SHA1-Digest: LIWbG3cOAqhBsa51jaZ7HF/vsfo=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: QdryQvJlVywlE0MGLuwYCkmkyWk=
+
+Name: com/jgoodies/forms/layout/FormSpecParser$FormLayoutParseExceptio
+ n.class
+SHA1-Digest: 2QbtbrhMGBaoSllJzzCoNCSpm8Y=
+
+Name: com/jgoodies/forms/builder/ButtonBarBuilder.class
+SHA1-Digest: lCU5hXl9flE2UWtMeDSD6SxGvwM=
+
+Name: com/jgoodies/forms/layout/CellConstraints.class
+SHA1-Digest: uAZEuhUcHsUBcvq+shyupLT7JY8=
+
+Name: com/jgoodies/forms/layout/RowSpec.class
+SHA1-Digest: i6nVtyR1EzxqA2r8QeHMNqdetXM=
+
+Name: com/jgoodies/forms/debug/FormDebugPanel.class
+SHA1-Digest: Sp3EjcD8vwnmz9AqFOwbQoo5P5w=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$1.class
+SHA1-Digest: weHU29Q4oqR+509QGvQsKB/yIkk=
+
+Name: com/jgoodies/forms/layout/FormLayout$ComponentSizeCache.class
+SHA1-Digest: 4I7I4wnS3R3udAitg5+dSQ1py0A=
+
+Name: com/jgoodies/forms/util/DefaultUnitConverter$DialogBaseUnits.cla
+ ss
+SHA1-Digest: Hs3thPy1BaKL2Zkr7cuwxbDk8Ik=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$TitleLabel.
+ class
+SHA1-Digest: sFEEX66my9aQsIdV6sjdUJ5MNTc=
+
+Name: com/jgoodies/forms/util/LayoutStyle.class
+SHA1-Digest: 86BnYvL6n6vyMy0p7w5g4Wj+4t0=
+
+Name: com/jgoodies/forms/layout/FormLayout$MinimumHeightMeasure.class
+SHA1-Digest: tUQRTh4f+fx0tQOIxaC566v4Lw4=
+
+Name: com/jgoodies/forms/layout/PrototypeSize.class
+SHA1-Digest: lcF4XQ62Oi32u4YPdQXa7bgxQP0=
+
+Name: com/jgoodies/forms/factories/Borders.class
+SHA1-Digest: nFVYXn5ijWw5xNXqxuLatK8OzVM=
+
+Name: com/jgoodies/forms/layout/FormLayout$1.class
+SHA1-Digest: LacImIMtVkBbQ0NzHdmqsjYkags=
+
+Name: com/jgoodies/forms/layout/FormSpec.class
+SHA1-Digest: cojdY2wsrzKFxuAu6JAsEWRLw8Y=
+
+Name: com/jgoodies/forms/util/DefaultUnitConverter.class
+SHA1-Digest: Kq2giJoZl/g+TngisULgDwMsOvE=
+
+Name: com/jgoodies/forms/layout/FormLayout$PreferredWidthMeasure.class
+SHA1-Digest: /tpLkfQv4JBZPk9waHuiRM5snS4=
+
+Name: com/jgoodies/forms/builder/DefaultFormBuilder.class
+SHA1-Digest: 6BBGpswOyHABeLpehsXvKKzWDpE=
+
+Name: com/jgoodies/forms/factories/Borders$1.class
+SHA1-Digest: 0NihWzhJHihT4QnGzU1GQ95ba4Q=
+
+Name: com/jgoodies/forms/util/AbstractUnitConverter.class
+SHA1-Digest: X29x43uTrwPF4Z26xuCIR1jD7Es=
+
+Name: com/jgoodies/forms/layout/Sizes.class
+SHA1-Digest: L/raZ9qWvVEaH8VRmk6vnv+k5HU=
+
+Name: com/jgoodies/forms/util/UnitConverter.class
+SHA1-Digest: E8cW2pv0UNLjzCdN4p09wlHXVls=
+
+Name: com/jgoodies/forms/layout/FormSpec$1.class
+SHA1-Digest: U25BmvcBP68SCos06g9FT6l4iuo=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$ReadOnlyLab
+ el.class
+SHA1-Digest: 9MnFUmYIsyaI0cg3DQp9unACNKo=
+
+Name: com/jgoodies/forms/layout/ColumnSpec.class
+SHA1-Digest: Bqf3IsGYmKoOljn30YuaycIkxgs=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$FormsLabel$
+ AccessibleFormsLabel.class
+SHA1-Digest: 7anog2c2zdWNj+YWk5FpCFqy1a8=
+
+Name: com/jgoodies/forms/factories/FormFactory.class
+SHA1-Digest: NKirAoOBAMhSRJi5z+VPw1LgFDg=
+
+Name: com/jgoodies/forms/util/Utilities.class
+SHA1-Digest: UlJDktXgzArMHV6d7/P5TQInXx4=
+
+Name: com/jgoodies/forms/builder/AbstractButtonPanelBuilder.class
+SHA1-Digest: kIEpGYhSjAX4RqXmVmZTrQNnA4Q=
+
+Name: com/jgoodies/forms/util/FormUtils.class
+SHA1-Digest: pTKGGonpy4CR46VZi8ff9IfP1IE=
+
+Name: com/jgoodies/forms/builder/AbstractI15dPanelBuilder.class
+SHA1-Digest: +6+9OMfuFLpdO0n3VCWcGr+iWWo=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory.class
+SHA1-Digest: sHVdZhKNiKJa/C7uoXHOYfLh/00=
+
+Name: com/jgoodies/forms/layout/FormLayout$PreferredHeightMeasure.clas
+ s
+SHA1-Digest: znD/DEE/jPKpt9txSr5E5fwF1+A=
+
+Name: com/jgoodies/forms/layout/ConstantSize.class
+SHA1-Digest: oqFjli4faimJxSb7q9a//EHeIho=
+
+Name: com/jgoodies/forms/util/WindowsLayoutStyle.class
+SHA1-Digest: uapnoktiL8oSUkdZbqYVQI6H0Ss=
+
+Name: com/jgoodies/forms/factories/ButtonBarFactory.class
+SHA1-Digest: O3QJm13InuuKYQUTSMPN4IWdoU4=
+
+Name: com/jgoodies/forms/layout/FormLayout.class
+SHA1-Digest: j8Ac6NIcZzZ2u8rAOTrqVQM04Ao=
+
+Name: com/jgoodies/forms/factories/ComponentFactory.class
+SHA1-Digest: FUkNjVM15kCf2h69gX5Vtqo8qeQ=
+
+Name: com/jgoodies/forms/layout/ConstantSize$1.class
+SHA1-Digest: NqNXgpqZ1Fx2iqlDl3O9FiCcLkE=
+
+Name: com/jgoodies/forms/factories/ButtonBarFactory$MyButtonBarBuilder
+ 2.class
+SHA1-Digest: dGh2e43DBEBMatlBlkSdo0uMD+E=
+
+Name: com/jgoodies/forms/layout/BoundedSize.class
+SHA1-Digest: V44BeTkDiX7jI0coizPTDbcVijw=
+
+Name: com/jgoodies/forms/layout/CellConstraints$1.class
+SHA1-Digest: FpsVuAvBHMI1LCoHPD7pA7inrQ0=
+
+Name: com/jgoodies/forms/factories/ComponentFactory2.class
+SHA1-Digest: yPXTd4FZ60maUYTspbq6wtRHHfY=
+
+Name: com/jgoodies/forms/factories/ButtonBarFactory$1.class
+SHA1-Digest: bBK8GMfodQllP7S18EUSpMCembQ=
+
+Name: com/jgoodies/forms/layout/FormSpecParser.class
+SHA1-Digest: BLRPivuBPZqsTl+qkFMHNGj23Xg=
+
+Name: com/jgoodies/forms/builder/ButtonBarBuilder2.class
+SHA1-Digest: uyoIAq1Va9v6bmUsClqosddhitk=
+
+Name: com/jgoodies/forms/factories/DefaultComponentFactory$FormsLabel.
+ class
+SHA1-Digest: WXKoRKx4APucbMxqfdJGdBHHXlM=
+
