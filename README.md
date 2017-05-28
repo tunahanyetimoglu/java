@@ -1,3 +1,3 @@
 # java
 
-ders kodları!
+Java kod çalışmaları
