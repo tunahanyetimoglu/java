@@ -27,6 +27,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
 /**
@@ -58,11 +59,13 @@ public class Kafe extends JFrame {
     JList icicekler      = new JList(drink);
     JList tatlilar    = new JList(dessert);
     
-    JLabel ucret,SiparisListesi,label1,label2,label3,label4;
+    JTextField num;
+    
+    JLabel ucret,SiparisListesi,label1,label2,label3,label4,label5;
     static JLabel label0;
     
     JButton button0,button1,button2,button3,button4,button5,button6,button7,
-            button8,button9,button10;
+            button8,button9,button10,fis;
     
     public void menu(String masa) {
         
@@ -609,24 +612,61 @@ public class Kafe extends JFrame {
            
            public void actionPerformed(ActionEvent ae)
            {
-            /*  try {                  
-                    FileReader fr = new FileReader("C:\\Users\\free\\Desktop\\"+""+".txt");
+                JFrame make = new JFrame("KASA");
+                make.setBounds(530,225,250,250);
+                make.setLayout(null);
+                make.setVisible(true);
+               
+                label5 = new JLabel("Masanızın Numarası : ");
+                label5.setBounds(50,50,180,25);
+                label5.setFont(new Font("LucidaSan",Font.PLAIN,15));
+                label5.setForeground(Color.BLACK);
+                make.add(label5);
+               
+                num = new JTextField();
+                num.setBounds(75,75,75,25);
+                make.add(num);
+               
+                fis = new JButton("Fiş iste");
+                fis.setBounds(75,125,75,75);
+                make.add(fis);
+               
+                fis.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent ae){
+                        int masa_no = Integer.parseInt(num.getText());
+                        if(masa_no > 10){
+                            JOptionPane.showMessageDialog(null,"Yanlış masa_no");
+                            return;
+                        }else{
+                            String masa_s = Integer.toString(masa_no);
+                            fis_kes(masa_s);
+                            make.setVisible(false);
+                        }
+                    } 
+                });
+                
+           }       
+        });   
+                
+    }
+    
+    public void fis_kes(String s){
+          try {                  
+                    FileReader fr = new FileReader("C:\\Users\\free\\Desktop\\masa "+s+".txt");
                     BufferedReader br = new BufferedReader(fr);
                     String str;
                     while((str = br.readLine()) != null)
                     {
-                    
+                        System.out.println(str);
                     }
                     br.close();
                 }catch (IOException ex) {
                     Logger.getLogger(Kafe.class.getName()).log(Level.SEVERE, null, ex);
                 }finally{
-                    File f = new File("C:\\Users\\free\\Desktop\\"+""+".txt");
-                }*/ 
-               
-           }       
-        });   
-                
+                    File f = new File("C:\\Users\\free\\Desktop\\masa "+s+".txt");
+                    f.delete();
+                  
+                }
     }
     
     public static void main(String[] args) {
