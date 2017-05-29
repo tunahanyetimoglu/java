@@ -3,24 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kafe;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 import javax.swing.ListSelectionModel;
 
 /**
@@ -32,12 +38,13 @@ public class Kafe extends JFrame {
     ArrayList<Double> hesaplistesi = new ArrayList<Double>();
     static DefaultListModel<String> model = null;
     static double hesap = 0.0;
+    static String select;
     
     String[]    soup      = {"Mercimek 5 TL","Ezogelin 5TL","Yayla 5TL","Domates 5 TL"
                             ,"Mantar 4 TL","Şehriye 5 TL","İşkembe 9.5 TL"
                             ,"Kelle Paça 9.5 TL"};
-    String[]    yemekS    = {"Patlıcan Kebap - 10TL","Porsiyon ET - 12 TL"
-                            ,"Pilavüstü ET - 15 TL","Porsiyon Tavuk - 8 TL"
+    String[]    yemekS    = {"Patlıcan Kebap - 10TL","Porsiyon ET"
+                            ,"Pilavüstü ET - 15 TL","Porsiyon Tavuk"
                             ,"Pilavüstü Tavuk - 10 TL"};
     String[]    drink = {"Kola 4 TL","Gazoz 4 TL","Fanta 4 TL","Gazoz 4 TL"
                             ,"Meyvesuyu 3 TL","Çay 2.5 TL","Ayran 3 TL"};
@@ -154,26 +161,107 @@ public class Kafe extends JFrame {
             public void actionPerformed(ActionEvent ae){
                 siparisler.setEnabled(true);
                 siparisler.setModel(model);
-                String selected = yemekler.getSelectedValue().toString();           // RadioButton eklenecekler
-                model.addElement(selected);                                         //Ekstra seçenek sunulacak
-                if (yemekler.getSelectedIndex() == 0){
-                    hesap += 10;
-                    hesaplistesi.add((double)10);
-                }else if (yemekler.getSelectedIndex() == 1){
-                    hesap += 12;
-                    hesaplistesi.add((double)12);
-                }else if (yemekler.getSelectedIndex() == 2){
-                    hesap += 15;
-                    hesaplistesi.add((double)15);
-                }else if (yemekler.getSelectedIndex() == 3){
-                    hesap += 8;
-                    hesaplistesi.add((double)8);
-                }else if (yemekler.getSelectedIndex() == 4){
-                    hesap += 10;
-                    hesaplistesi.add((double)10);
+                String selected = yemekler.getSelectedValue().toString();
+                if(selected == "Porsiyon ET"){
+                    JFrame ekleme = new JFrame();
+                    JRadioButton rb4 = new JRadioButton("Duble Porsiyon");
+                    rb4.setActionCommand("Duble - 22 TL");
+                    JRadioButton rb1 = new JRadioButton("Tam Porsiyon");
+                    rb1.setActionCommand("Tam Porsiyon - 12 TL");
+                    JRadioButton rb2 = new JRadioButton("Yarım Porsiyon");
+                    rb2.setActionCommand("Yarım Porsiyon - 8");
+                    JButton      rbb = new JButton     ("Seç");
+                    ButtonGroup bG = new ButtonGroup();
+                    bG.add(rb1);
+                    bG.add(rb2);;
+                    bG.add(rb4);
+                    ekleme.setSize(100,200);
+                    ekleme.setLayout( new FlowLayout());
+                    ekleme.add(rb4);
+                    ekleme.add(rb1);
+                    ekleme.add(rb2);
+                    ekleme.add(rbb);
+                    ekleme.setVisible(true);
+                    rbb.addActionListener(new ActionListener()
+                    {
+                        public void actionPerformed(ActionEvent ae){
+                            String x = bG.getSelection().getActionCommand();
+                             if(x == "Duble - 22 TL")
+                            {
+                                hesap += 22;
+                                hesaplistesi.add((double)22);
+                            }else if(x == "Tam Porsiyon - 12 TL"){
+                                hesap += 12;
+                                hesaplistesi.add((double)12);
+                            }else if(x == "Yarım Porsiyon - 8"){
+                                hesap += 8;
+                                hesaplistesi.add((double)8);
+                            }
+                            model.addElement(selected+"-"+x);
+                            label0.setText(hesap+" TL ");
+                            ekleme.setVisible(false);
+                        } 
+                    });
+                }else if(selected == "Porsiyon Tavuk"){
+                    JFrame ekleme = new JFrame();
+                    JRadioButton rb4 = new JRadioButton("Duble Porsiyon");
+                    rb4.setActionCommand("Duble - 18 TL");
+                    JRadioButton rb1 = new JRadioButton("Tam Porsiyon");
+                    rb1.setActionCommand("Tam Porsiyon - 10 TL");
+                    JRadioButton rb2 = new JRadioButton("Yarım Porsiyon");
+                    rb2.setActionCommand("Yarım Porsiyon - 6");
+                    JButton      rbb = new JButton     ("Seç");
+                    ButtonGroup bG = new ButtonGroup();
+                    bG.add(rb1);
+                    bG.add(rb2);;
+                    bG.add(rb4);
+                    ekleme.setSize(100,200);
+                    ekleme.setLayout( new FlowLayout());
+                    ekleme.add(rb4);
+                    ekleme.add(rb1);
+                    ekleme.add(rb2);
+                    ekleme.add(rbb);
+                    ekleme.setVisible(true);
+                    rbb.addActionListener(new ActionListener()
+                    {
+                        public void actionPerformed(ActionEvent ae){
+                            String x = bG.getSelection().getActionCommand();
+                            if(x == "Duble - 18 TL")
+                            {
+                                hesap += 18;
+                                hesaplistesi.add((double)18);
+                     
+                            }else if(x == "Tam Porsiyon - 10 TL"){
+                                hesap += 10;
+                                hesaplistesi.add((double)10);
+                            }else if(x == "Yarım Porsiyon - 6"){
+                                hesap += 6;
+                                hesaplistesi.add((double)6);
+                            }
+                            model.addElement(selected+"-"+x);
+                            label0.setText(hesap+" TL ");
+                            ekleme.setVisible(false);
+                        } 
+                    });
+                }else{
+                    model.addElement(selected);                                        
+                    if (yemekler.getSelectedIndex() == 0){
+                        hesap += 10;
+                        hesaplistesi.add((double)10);
+                    }else if (yemekler.getSelectedIndex() == 2){
+                        hesap += 15;
+                        hesaplistesi.add((double)15);
+                    }else if (yemekler.getSelectedIndex() == 3){
+                        hesap += 8;
+                        hesaplistesi.add((double)8);
+                    }else if (yemekler.getSelectedIndex() == 4){
+                        hesap += 10;
+                        hesaplistesi.add((double)10);
+                    }
+                    label0.setText(hesap+" TL ");
                 }
-                label0.setText(hesap+" TL ");
-            }
+                
+            }   
         });
                 
         button1.addActionListener(new ActionListener()
@@ -315,19 +403,25 @@ public class Kafe extends JFrame {
                     if(dialogButton == JOptionPane.YES_OPTION){
                         siparisler.setEnabled(false);
                         try{
-                            File f = new File("C:\\Users\\hesap.txt");
+                            File f = new File("C:\\Users\\free\\Desktop\\"+masa+".txt");
                             if(!f.exists()){
 				f.createNewFile();
                             }
-                            FileWriter fw = new FileWriter(f);
+                            FileWriter fw = new FileWriter(f,true);
+                            PrintWriter pw = new PrintWriter(fw);
                             String metin = masa + " \n ";
                             for (int i = 0; i < model.size(); i++) 
 			    {
 				metin += model.get(i)+"\n";
 			    }
                             metin += "Toplam Fiyat : " + hesap+"\n";
-                            fw.write(metin);
-                            fw.close();
+                            pw.println(metin);
+                            pw.close();
+                            model.clear();
+                            hesaplistesi.clear();
+                            hesap = 0;
+                            label0.setText("");
+                            yeni.setVisible(false);
                                     
                         }catch (IOException ex) {
                             Logger.getLogger(Kafe.class.getName()).log(Level.SEVERE, null, ex);
@@ -511,18 +605,33 @@ public class Kafe extends JFrame {
         });
         
         button10.addActionListener(new ActionListener()
-        {
+        {  
+           
            public void actionPerformed(ActionEvent ae)
            {
-          //Yazılan Siparişten bilgiler okunacak hesap çıktısı olarak dönülecek!
-           }        
-        });
+            /*  try {                  
+                    FileReader fr = new FileReader("C:\\Users\\free\\Desktop\\"+""+".txt");
+                    BufferedReader br = new BufferedReader(fr);
+                    String str;
+                    while((str = br.readLine()) != null)
+                    {
+                    
+                    }
+                    br.close();
+                }catch (IOException ex) {
+                    Logger.getLogger(Kafe.class.getName()).log(Level.SEVERE, null, ex);
+                }finally{
+                    File f = new File("C:\\Users\\free\\Desktop\\"+""+".txt");
+                }*/ 
+               
+           }       
+        });   
                 
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
         new Kafe();
-    }
+    }                      
     
 }
