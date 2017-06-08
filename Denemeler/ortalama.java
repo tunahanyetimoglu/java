@@ -63,25 +63,38 @@ public class ortalama extends JFrame {
         add(bt1);
         add(bt2);
         
-        setVisible(true);
+        Hesapla h = new Hesapla();
+        Temizle t = new Temizle();
         
-        bt1.addActionListener(new ActionListener(){
-          
-           
-            public void actionPerformed(ActionEvent e) {
-                
+        bt1.addActionListener(h);
+        bt2.addActionListener(t);
+        
+        setVisible(true);
+       
+    }
+
+        public class Hesapla implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try{
                 double ortalama = Double.parseDouble(tf1.getText())*0.4 + Double.parseDouble(tf2.getText())*0.6;
                 lb4.setText(""+ortalama);
                 bt2.setEnabled(true);
                 bt1.setEnabled(false);
                 tf1.setEditable(false);
-                tf2.setEditable(false);             
-               
+                tf2.setEditable(false);
+            }catch(Exception a){
+                JOptionPane.showMessageDialog(null,"Notlarınızı Giriniz!");
             }
-        });
+        }
+            
+        }
         
-        bt2.addActionListener(new ActionListener(){
-           public void actionPerformed(ActionEvent e){
+        public class Temizle implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
                lb4.setText("");
                bt1.setEnabled(true);
                bt2.setEnabled(false);
@@ -89,10 +102,9 @@ public class ortalama extends JFrame {
                tf2.setEditable(true);
                tf1.setText("");
                tf2.setText("");
-           } 
-        });
-    }
-    
+        }
+            
+        }  
     public static void main(String args[]){
         new ortalama();
     }
